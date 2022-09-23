@@ -1,9 +1,7 @@
 import './sass/main.scss';
-// import './js/app';
 import './js/refs';
 import './js/get-dates';
 import './js/get-current-date';
-
 import './js/render-notes-table';
 import './js/open-form';
 import './js/close-form';

@@ -1,6 +1,5 @@
 export default {
   tableEl: document.querySelector('.js-notes-table'),
-  tbodyEl: document.querySelector('.tbody'),
   lightbox: document.querySelector('.js-lightbox'),
   addNoteForm: document.querySelector('.note-form'),
   openFormBtn: document.querySelector('[data-action="open-form"]'),

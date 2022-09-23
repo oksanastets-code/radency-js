@@ -55,7 +55,6 @@ let summaryData = [];
 export function renderSummaryTable() {
   summaryData = [];
   makeSummaryTableRowData();
-  // const summaryTableEl = document.querySelector('.js-summary-table');
   const summaryTableRowsMarkup = summaryData.map(makeSummaryTableRowMarkup).join('');
   if ([...refs.summaryTableEl.children].length > 1) {
     refs.summaryTableEl.lastElementChild.remove();

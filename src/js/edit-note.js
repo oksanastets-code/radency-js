@@ -1,7 +1,7 @@
 import refs from './refs';
 import { getBtns } from './get-btns';
 import { renderSummaryTable } from './render-summary';
-// import { editTarget } from './add-new-note';
+import { tbodyEl } from './add-new-note';
 
 export let editTarget = [];
 export let index = -1;
@@ -17,7 +17,7 @@ export function editNote(callback) {
       refs.addBtn.style.display = 'none';
 
       // берем індекс цільової записки
-      index = [...refs.tbodyEl.children].indexOf(parent);
+      index = [...tbodyEl.children].indexOf(parent);
       
       // берем дані цільової записки
       editTarget.map(item => {

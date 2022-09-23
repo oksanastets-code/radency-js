@@ -22,7 +22,6 @@ export const makeNotesTableRowMarkup = note => {
   `;
 };
 
-// refs.tableEl = document.querySelector('.js-notes-table');
 const notesTableRowsMarkup = notesList.map(makeNotesTableRowMarkup).join('');
 
 refs.tableEl.insertAdjacentHTML('beforeend', notesTableRowsMarkup);

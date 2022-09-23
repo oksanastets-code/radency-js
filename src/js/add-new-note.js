@@ -9,9 +9,9 @@ import { editNote } from './edit-note';
 import { archiveNote } from './archive-note';
 import { editTarget, index } from './edit-note';
 import { makeNotesTableRowMarkup } from './render-notes-table';
+
 // додавання нового запису
 refs.addNoteForm.addEventListener('submit', onSubmit);
-console.log(refs.tbodyEl);
 function onSubmit(event) {
   event.preventDefault();
   const formElements = event.currentTarget.elements;
@@ -31,9 +31,7 @@ function onSubmit(event) {
   editNote(getBtns);
 }
 
-// const tbodyEl = document.querySelector('tbody');
-// export let editTarget = [];
-// let index = -1;
+export const tbodyEl = document.querySelector('tbody');
 function renderNewNote(name, created, category, content) {
   const newNote = {
     name,
@@ -56,10 +54,10 @@ function renderNewNote(name, created, category, content) {
   // console.log(newNote);
 
   const newNoteRow = makeNotesTableRowMarkup(newNote);
-  refs.tbodyEl.insertAdjacentHTML('beforeend', newNoteRow);
+  tbodyEl.insertAdjacentHTML('beforeend', newNoteRow);
 
   if (editTarget.length) {
-    const array = [...refs.tbodyEl.children];
+    const array = [...tbodyEl.children];
     array[index].remove();
   }
 }
