@@ -7,7 +7,7 @@ export const makeNotesTableRowMarkup = note => {
   let { name, created, category, content, dates } = note;
   dates = getDates(content);
   return `  
-        <tr class="js-notes-row">
+        <tr class="notes-row js-notes-row">
           <td class="js-name">${name}</td>
           <td class="js-created">${created}</td>
           <td class="js-categories">${category}</td>

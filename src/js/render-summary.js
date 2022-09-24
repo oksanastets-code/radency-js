@@ -8,7 +8,7 @@ const tds = () => {
 const makeSummaryTableRowMarkup = data => {
   let { option, active, archieved } = data;
   return `  
-        <tr>
+        <tr class="summary-row">
           <td>${option}</td>
           <td>${active}</td>
           <td>${archieved}</td>

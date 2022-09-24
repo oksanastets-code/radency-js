@@ -14,7 +14,7 @@ function onaAchiveLinkClick(e) {
 const makeArchiveTableRowMarkup = data => {
   let { name, category, content } = data;
   return `  
-        <tr>
+        <tr class="archive-row">
           <td>${name}</td>
           <td>${category}</td>
           <td>${content}</td>
